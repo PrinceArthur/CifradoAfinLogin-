@@ -8,7 +8,7 @@ COPY package.json /app
 
 ENV NODE_OPTIONS=--max_old_space_size=4096
 
-RUN npm install
+# RUN npm install
 
 COPY . /app
 
