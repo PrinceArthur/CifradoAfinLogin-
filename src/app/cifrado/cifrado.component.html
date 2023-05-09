@@ -1,0 +1,55 @@
+<mat-toolbar class="toolbar">
+    <span>Cifrado Afín</span>
+    <span class="toolbar-spacer"></span>
+    <button mat-button class="logout" (click)="logout()">Logout</button>
+  </mat-toolbar>
+  
+  <div *ngIf="isCipher"> 
+    <mat-card class="card">
+      <mat-card-header class="cardHeader">
+        <a class="title">Cifrado</a>
+        <button class="buttonChange" (click)="changeCipher()">Descifrado</button>
+      </mat-card-header>
+      <form (ngSubmit)="affineCipher()" #cipherForm="ngForm">
+        <mat-form-field class="form">
+          <textarea class="textArea" type="textArea" rows="6" matInput placeholder="Mensaje a Cifrar" name="message" [(ngModel)]="cipherFormData.message" required></textarea>
+          <mat-error class="errorMessage" *ngIf="cipherForm.controls['message'].invalid">El mensaje es requerido</mat-error>
+        </mat-form-field>
+        <mat-form-field class="constantForm">
+          <input class="constantArea" matInput type="number" placeholder="Constante a" name="a" [(ngModel)]="cipherFormData.a" required/>
+          <mat-error class="errorMessage" *ngIf="cipherForm.controls['a'].invalid">La constante a es requerida</mat-error>
+        </mat-form-field>
+        <mat-form-field class="constantForm">
+          <input class="constantArea" matInput type="number" placeholder="Constante b" name="b" [(ngModel)]="cipherFormData.b" required/>
+          <mat-error class="errorMessage" *ngIf="cipherForm.controls['b'].invalid">La constante b es requerida</mat-error>
+        </mat-form-field>
+        <button  class="button" type="submit">Cifrar</button>
+        <mat-form-field class="form">
+          <textarea class="textArea" rows="6" disabled="true" matInput placeholder="Mensaje Cifrado" name="chipheredText" [(ngModel)]="cipheredText"></textarea>
+        </mat-form-field>
+      </form>
+    </mat-card>
+  </div>
+  
+  
+  <div *ngIf="!isCipher"> 
+    <mat-card class="card">
+      <mat-card-header class="cardHeader">
+        <a class="title">Descifrado</a>
+        <button class="buttonChange" (click)="changeCipher()">Cifrado</button>
+      </mat-card-header>
+      <form (ngSubmit)="decipher()" #decipherForm="ngForm">
+        <mat-form-field class="form">
+          <textarea class="textArea" rows="6" matInput placeholder="Mensaje a Descifrar" name="message" [(ngModel)]="decipherFormData.message" required></textarea>
+          <mat-error class="errorMessage" *ngIf="decipherForm.controls['message'].invalid">El mensaje es requerido</mat-error>
+        </mat-form-field>
+        <button  class="button" type="submit">Descifrar</button>
+        <mat-form-field class="form">
+          <textarea class="textArea" rows="6" disabled="true" matInput placeholder="Mensaje Descifrado" name="dechipheredText" [(ngModel)]="decipheredText"></textarea>
+        </mat-form-field>
+        <mat-form-field class="form">
+          <textarea class="textArea" rows="6" disabled="true" matInput placeholder="4 letras más frecuentes" name="mostFrequents" [(ngModel)]="mostFrequents"></textarea>
+        </mat-form-field>
+      </form>
+    </mat-card>
+  </div>

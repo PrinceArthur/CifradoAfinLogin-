@@ -1,0 +1,97 @@
+.card {
+    height: auto;
+    max-width: 800px;
+    margin-left: 30%;
+    margin-top: 3%;
+    margin-bottom: 10%;
+    text-align: center;
+    background-color: #004280;
+}
+
+.form {
+    width: 90%;
+    max-width: 90%;
+    padding-top: 2%;
+    font-size: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 200px;
+}
+
+.inputArea {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+    max-height: 100%;
+    vertical-align: top;
+    resize: none;
+}
+
+.constantForm {
+    width: 70%;
+    max-width: 70%;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+}
+
+
+.constantArea {
+    width: 40%;
+    max-width: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+.toolbar {
+    background-color: #004280;
+    color: white;
+    text-align: center;
+}
+
+.button {
+    margin: 2%;
+    background-color: #0069cc;
+    width: 25%;
+    height: 80px;
+    font-family: Roboto,"Helvetica Neue", sans-serif;
+    color: white;
+    font-size: 32px;
+}
+
+.buttonChange {
+    margin: 2%;
+    background-color: #0069cc;
+    width: 15%;
+    height: 50px;
+    font-family: Roboto,"Helvetica Neue", sans-serif;
+    color: white;
+    font-size: 32px;
+    margin-left: 20%;
+}
+
+.cardHeader {
+    text-align: center;
+    float: right;
+}
+
+.errorMessage {
+    margin-top: 3%;
+    color: #ff6666;
+    font-size: 20px;
+}
+
+.logout {
+    margin-left: 90%;
+}
+
+.title {
+    font-size: 50px;
+    color: white;
+    margin: 3%;
+    margin-left: 43%;
+    text-align: center;
+}

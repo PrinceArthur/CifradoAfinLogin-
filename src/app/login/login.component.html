@@ -1,0 +1,19 @@
+<div> 
+    <mat-card class="card">
+      <mat-card-header class="cardHeader">
+        <a class="title">Login</a>
+      </mat-card-header>
+      <form (ngSubmit)="login()" #loginUserForm="ngForm" rows="12">
+        <mat-form-field class="constantForm">
+          <input class="inputArea" type="input"  matInput placeholder="Correo electrónico" name="email" [(ngModel)]="loginUserData.email" required/>
+          <mat-error class="errorMessage" *ngIf="loginUserForm.controls['email'].invalid">El correo electrónico es requerido</mat-error>
+        </mat-form-field>
+        <mat-form-field class="constantForm" rows="6">
+          <input class="inputArea" matInput type="password"  placeholder="Contraseña" name="password" [(ngModel)]="loginUserData.password" required/>
+          <mat-error class="errorMessage" *ngIf="loginUserForm.controls['password'].invalid">La contraseña es requerida</mat-error>
+        </mat-form-field>
+        <button  class="button" type="submit">Iniciar Sesión</button>
+      </form>
+      <mat-error class="errorMessage" *ngIf="error != ''">{{error}}</mat-error>
+    </mat-card>
+</div>
